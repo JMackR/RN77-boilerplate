@@ -6,11 +6,11 @@ upward-web/dist
 **/android/
 .nx
 tsconfig.base.json
-upwards-app/jest.config.ts
-upwards-app/react-naive.config.json
-upwards-app/README.md
+tallo-app/jest.config.ts
+tallo-app/react-naive.config.json
+tallo-app/README.md
 node_modules
-upwards-app/vendor/
+tallo-app/vendor/
 storybook/.*
 .*
 azure-pipelines.yml

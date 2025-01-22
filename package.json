@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "private": true,
   "author": {
-    "name": "upwardsports"
+    "name": "tallo"
   },
   "workspaces": {
     "packages": [
@@ -27,12 +27,12 @@
     "typescript": "tsc --noEmit",
     "nuke": "rimraf '**/node_modules' '**/Pods'",
     "android-remove-drawable": "yarn workspace android-remove-drawable",
-    "bundle-ios": "yarn workspace upwards bundle-ios",
-    "bundle-android": "yarn workspace upwards bundle-android",
-    "ios:deploy:qa": "cd upwards/ios && bundle exec fastlane qa --env qa",
-    "ios:deploy:prod": "yarn workspace upwards ios:deploy:prod",
-    "android:deploy:qa": "yarn workspace upwards android:deploy:qa",
-    "android:deploy:prod": "yarn workspace upwards android:deploy:prod",
+    "bundle-ios": "yarn workspace tallo bundle-ios",
+    "bundle-android": "yarn workspace tallo bundle-android",
+    "ios:deploy:qa": "cd tallo/ios && bundle exec fastlane qa --env qa",
+    "ios:deploy:prod": "yarn workspace tallo ios:deploy:prod",
+    "android:deploy:qa": "yarn workspace tallo android:deploy:qa",
+    "android:deploy:prod": "yarn workspace tallo android:deploy:prod",
     "web:deploy:dev": "yarn && cd upward-web && yarn && yarn build",
     "postinstall": "patch-package && is-ci || yarn husky install"
   },

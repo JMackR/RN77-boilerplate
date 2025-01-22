@@ -484,7 +484,7 @@ export const PhoneIcon: LocalSVGSource = Object.freeze({
   SVG: PhoneSVG,
 });
 
-export const upwardsLogo: LocalSVGSource = Object.freeze({
+export const talloLogo: LocalSVGSource = Object.freeze({
   SVG: RightArrowSVG,
 });
 export const RightArrowIcon: LocalSVGSource = Object.freeze({

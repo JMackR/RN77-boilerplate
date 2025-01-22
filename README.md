@@ -76,15 +76,15 @@ https://github.com/microsoft/react-native-code-push
 **_Before doing any pushes... run NPM RUN BUNDLE-IOS or ANDROID_**
 
 - appcenter apps list "View list of apps"
-- appcenter codepush deployment list -a upwards/upwards-ios
+- appcenter codepush deployment list -a tallo/tallo-ios
 
 ### Release to IOS
 
-- appcenter codepush release-react -a upwards/upwards-ios --plist-file-prefix upwards-QA -t '1.7.X' -d Qa -x
+- appcenter codepush release-react -a tallo/tallo-ios --plist-file-prefix tallo-QA -t '1.7.X' -d Qa -x
 
 ### Release to ANDROID
 
-- appcenter codepush release-react -a upwards/upwards-android -t '1.7.1' -d Production
+- appcenter codepush release-react -a tallo/tallo-android -t '1.7.1' -d Production
 
 #### options:
 
@@ -99,9 +99,9 @@ https://github.com/microsoft/react-native-code-push
 
 ### CLEARNING RELEASE HISTORY
 
-- appcenter codepush deployment clear -a upwards/upwards-ios Qa
+- appcenter codepush deployment clear -a tallo/tallo-ios Qa
 
-- backup command: code-push deployment clear upwards/upwards-ios Qa
+- backup command: code-push deployment clear tallo/tallo-ios Qa
 
 ## Branching strategy
 
