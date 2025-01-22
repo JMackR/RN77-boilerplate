@@ -1,0 +1,21 @@
+{
+  "name": "@tallo/navigation",
+  "$schema": "../../node_modules/nx/schemas/project-schema.json",
+  "sourceRoot": "@tallo/navigation-routes",
+  "projectType": "library",
+  "tags": [],
+  "targets": {
+    "lint": {
+      "executor": "@nx/eslint:lint",
+      "outputs": ["{options.outputFile}"]
+    },
+    "test": {
+      "executor": "@nx/jest:jest",
+      "outputs": ["{workspaceRoot}/coverage/{projectRoot}"],
+      "options": {
+        "jestConfig": "@tallo/navigation-routes/jest.config.ts"
+      }
+    }
+  },
+  "peer-dependencies": {}
+}

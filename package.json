@@ -1,0 +1,72 @@
+{
+  "name": "upward-workspace",
+  "version": "1.0.0",
+  "private": true,
+  "author": {
+    "name": "upwardsports"
+  },
+  "workspaces": {
+    "packages": [
+      "tallo-mobile",
+      "shared-libs/**",
+      "modules/**"
+    ]
+  },
+  "scripts": {
+    "android": "yarn workspace android",
+    "clean": "rm -rf node_modules && cd upward-web && rm -rf node_modules && cd ../upward-app && rm -rf node_modules",
+    "ios": "yarn workspace ios",
+    "lint": "eslint .",
+    "lint-fix": "eslint . --fix",
+    "prepare": "husky install",
+    "prettier": "prettier --ignore-unknown --write .",
+    "prettier-check": "prettier --check .",
+    "test": "jest",
+    "coverage": "jest --coverage",
+    "coverage-ci": "jest --coverage --coverageReporters=cobertura",
+    "typescript": "tsc --noEmit",
+    "nuke": "rimraf '**/node_modules' '**/Pods'",
+    "android-remove-drawable": "yarn workspace android-remove-drawable",
+    "bundle-ios": "yarn workspace upwards bundle-ios",
+    "bundle-android": "yarn workspace upwards bundle-android",
+    "ios:deploy:qa": "cd upwards/ios && bundle exec fastlane qa --env qa",
+    "ios:deploy:prod": "yarn workspace upwards ios:deploy:prod",
+    "android:deploy:qa": "yarn workspace upwards android:deploy:qa",
+    "android:deploy:prod": "yarn workspace upwards android:deploy:prod",
+    "web:deploy:dev": "yarn && cd upward-web && yarn && yarn build",
+    "postinstall": "patch-package && is-ci || yarn husky install"
+  },
+  "dependencies": {
+    "react": "18.3.1",
+    "react-native": "0.77.0"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.25.2",
+    "@babel/preset-env": "^7.25.3",
+    "@babel/runtime": "^7.25.0",
+    "@react-native-community/cli": "15.0.1",
+    "@react-native-community/cli-platform-android": "15.0.1",
+    "@react-native-community/cli-platform-ios": "15.0.1",
+    "@react-native/babel-preset": "0.77.0",
+    "@react-native/eslint-config": "0.77.0",
+    "@react-native/metro-config": "0.77.0",
+    "@react-native/typescript-config": "0.77.0",
+    "@types/jest": "^29.5.13",
+    "@types/react": "^18.2.6",
+    "@types/react-test-renderer": "^18.0.0",
+    "eslint": "^8.19.0",
+    "jest": "^29.6.3",
+    "prettier": "2.8.8",
+    "react-test-renderer": "18.3.1",
+    "typescript": "5.0.4"
+  },
+  "engines": {
+    "node": ">=18"
+  },
+  "lint-staged": {
+    "*": [
+      "yarn prettier",
+      "yarn lint"
+    ]
+  }
+}

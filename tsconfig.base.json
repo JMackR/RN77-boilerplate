@@ -1,0 +1,39 @@
+{
+  "compileOnSave": false,
+  "compilerOptions": {
+    "rootDir": ".",
+    "sourceMap": true,
+    "declaration": false,
+    "moduleResolution": "node",
+    "emitDecoratorMetadata": true,
+    "experimentalDecorators": true,
+    "resolveJsonModule": true,
+    "importHelpers": true,
+    "target": "ES2015",
+    "module": "ES2015",
+    "lib": ["es2020", "dom"],
+    "skipLibCheck": true,
+    "skipDefaultLibCheck": true,
+    "baseUrl": "./",
+    "paths": {
+      "@tallo/authentication": ["modules/authentication/index.ts","modules/authentication/auth-module.ts"],
+      "@tallo/user": ["modules/user-module/index.ts"],
+      "@tallo/training": ["modules/training-module/index.ts"],
+      "@tallo/stats": ["modules/statistics-module/index.ts"],
+      "@tallo/groups": ["modules/groups-module/index.tsx"],
+      "@tallo/encourage": ["modules/encouragment-module/index.ts"],
+      "@tallo/analytics": ["shared-libs/analytics/index.ts"],
+      "@tallo/assets": ["shared-libs/assets/index.ts"],
+      "@tallo/core-ui-library": ["shared-libs/core-ui-library/index.ts"],
+      "@tallo/core-ui-widgets": ["shared-libs/core-ui-widgets/index.ts"],
+      "@tallo/store": ["modules/store-core/index.ts", "modules/store-core/index.native.ts"],
+      "@tallo/themes": ["shared-libs/themes/index.ts"],
+      "@tallo/translations": ["shared-libs/translations/index.ts"],
+      "@tallo/utilities": ["shared-libs/utilities/index.ts"],
+      "@tallo/navigation": ["modules/navigation/index.ts"],
+      "@tallo/constants": ["shared-libs/constants/index.ts"]
+    }
+  },
+  //"include":  [".web.ts", ".web.tsx", ".ts", ".tsx", ".js", ".jsx"],
+  "exclude": ["node_modules", "tmp"]
+}
