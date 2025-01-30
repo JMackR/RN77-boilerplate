@@ -8,14 +8,13 @@
 import React from 'react';
 import type { PropsWithChildren } from 'react';
 import {
-  SafeAreaView,
-  ScrollView,
-  StatusBar,
+  //SafeAreaView,
+
   StyleSheet,
-  Text,
+  //Text,
   useColorScheme,
-  View,
 } from 'react-native';
+import {RootNavigator} from '@tallo/navigation'
 
 import {
   Colors,

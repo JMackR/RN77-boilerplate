@@ -1,8 +1,8 @@
-import { Badge, Text } from '@tallo/core-ui-library';
+//import { Badge, Text } from '@tallo/core-ui-library';
 import { useColorForBackgroundColor } from '@tallo/themes';
-import { isTablet, ms } from '@tallo/utilities';
+//import { isTablet, ms } from '@tallo/utilities';
 import React, { useEffect, useRef } from 'react';
-import { useTranslation } from 'react-i18next';
+//import { useTranslation } from 'react-i18next';
 import { StyleSheet, TouchableOpacity, View } from 'react-native';
 import * as Animatable from 'react-native-animatable';
 
@@ -11,20 +11,20 @@ const Styles = StyleSheet.create({
     flex: 1,
     justifyContent: 'center',
     alignItems: 'center',
-    transform: [{ scale: isTablet ? 0.7 : 1 }],
+    //transform: [{ scale: isTablet ? 0.7 : 1 }],
     position: 'relative',
     height: '100%',
   },
   badge: {
     position: 'absolute',
-    top: isTablet ? -ms(15) : 0,
+    //top: isTablet ? -ms(15) : 0,
     left: '55%',
   },
 });
 
 interface TabBarButtonProps {
   onPress: () => void;
-  renderIcon: React.ReactNode;
+  //renderIcon: React.ReactNode;
   active: boolean;
   labelText: string;
   badgeAmount?: number;
@@ -44,7 +44,7 @@ const animate2 = { 0: { scale: 1 }, 1: { scale: 1 } };
 const TabBarButton = (props: TabBarButtonProps) => {
   const { onPress, renderIcon, badgeAmount, labelText, index, active, testID } = props;
   const textColorKey = props.active ? 'brand' : 'secondary';
-  const { t } = useTranslation();
+  //const { t } = useTranslation();
   const viewRef = useRef<any>(null);
   const styles = useStyles();
 
@@ -59,17 +59,17 @@ const TabBarButton = (props: TabBarButtonProps) => {
   return (
     <TouchableOpacity style={[Styles.tabButton]} onPress={onPress} testID={testID || `tab-navigator.tab-bar-button.${index}`}>
       <Animatable.View ref={viewRef} duration={1200} style={active ? styles.circle : styles.unfocusedCircle}>
-        {renderIcon}
+        {/*{renderIcon}*/}
       </Animatable.View>
 
       {badgeAmount !== undefined && badgeAmount > 0 && (
         <View style={Styles.badge}>
-          <Badge amount={badgeAmount} testID={'tab-navigator.tab-bar-button.badge'} showBorder />
+          {/*<Badge amount={badgeAmount} testID={'tab-navigator.tab-bar-button.badge'} showBorder />*/}
         </View>
       )}
-      <Text textType={active ? 'bodyMedium3' : 'bodyMedium3'} color={textColorKey} testID={'tab-navigator.tab-bar-button.label'} numberOfLines={1}>
+      {/*<Text textType={active ? 'bodyMedium3' : 'bodyMedium3'} color={textColorKey} testID={'tab-navigator.tab-bar-button.label'} numberOfLines={1}>
         {t(labelText)}
-      </Text>
+      </Text>*/}
     </TouchableOpacity>
   );
 };
@@ -83,14 +83,14 @@ const useStyles = () =>
       justifyContent: 'center',
       backgroundColor: useColorForBackgroundColor('primary'),
       borderRadius: 50,
-      width: ms(33),
-      height: ms(33),
+      //width: ms(33),
+      //height: ms(33),
     },
     unfocusedCircle: {
       alignItems: 'center',
       justifyContent: 'center',
       borderRadius: 50,
-      width: ms(33),
-      height: ms(33),
+      //width: ms(33),
+      //height: ms(33),
     },
   });
