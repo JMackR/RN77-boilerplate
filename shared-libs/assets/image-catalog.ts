@@ -10,15 +10,6 @@ export interface LocalSVGSource {
     height: number | string;
   };
 }
-
-// Actions
-import RunSVG from './svgs/runtest.svg';
-export const RunIcon: LocalSVGSource = deepFreeze({
-  SVG: RunSVG,
-  type: 'svg',
-});
-import BabyCarriageSVG from './svgs/baby-carriage.svg';
-import BellSVG from './svgs/bell.svg';
 import CalendarSVG from './svgs/calendar.svg';
 import CameraSVG from './svgs/camera.svg';
 import CircleDollarSVG from './svgs/circle-dollar.svg';
@@ -106,119 +97,6 @@ import RightArrowShortSVG from './svgs/actions/right-arrow-short.svg';
 import RoundCheckSVG from './svgs/actions/round-check.svg';
 import SelectPhotoSVG from './svgs/actions/select-photo.svg';
 import AvatarSVG from './svgs/avatar/avatar-icon.svg';
-// Plans
-import BookSVG from './svgs/plan-icons/book.svg';
-import ChangeSVG from './svgs/plan-icons/change.svg';
-import ClockSVG from './svgs/plan-icons/clock.svg';
-import CupSVG from './svgs/plan-icons/cup.svg';
-import ManageSVG from './svgs/plan-icons/manage.svg';
-import SearchSVG from './svgs/plan-icons/search.svg';
-import StreamingSVG from './svgs/plan-icons/streaming.svg';
-import WalkerSVG from './svgs/plan-icons/walker.svg';
-// Stats
-import AwardSVG from './svgs/stats/award.svg';
-import RunnerSVG from './svgs/stats/runner.svg';
-import StatsSVG from './svgs/stats/stats.svg';
-import StepsSVG from './svgs/stats/steps.svg';
-import TrophySVG from './svgs/stats/trophy';
-
-import UserSVG from './svgs/avatar/user.svg';
-import LogoSVG from './svgs/logo.svg';
-import AlertSVG from './svgs/alerts/alert-fill.svg';
-
-import TrainingSVG from './svgs/training.svg';
-import GroupsSVG from './svgs/groups.svg';
-import StatsTabSVG from './svgs/stats.svg';
-import StoreSVG from './svgs/store.svg';
-
-
-
-export const TrainingIcon: LocalSVGSource = deepFreeze({
-  SVG: TrainingSVG,
-  type: 'svg',
-});
-
-export const GroupsIcon: LocalSVGSource = deepFreeze({
-  SVG: GroupsSVG,
-  type: 'svg',
-});
-export const StatsTabIcon: LocalSVGSource = deepFreeze({
-  SVG: StatsTabSVG,
-  type: 'svg',
-});
-export const StoreIcon: LocalSVGSource = deepFreeze({
-  SVG: StoreSVG,
-  type: 'svg',
-});
-
-export const AlertIcon: LocalSVGSource = deepFreeze({
-  SVG: AlertSVG,
-  type: 'svg',
-});
-export const UserIcon: LocalSVGSource = deepFreeze({
-  SVG: UserSVG,
-  type: 'svg',
-});
-//STATS
-export const TrophyIcon: LocalSVGSource = deepFreeze({
-  SVG: TrophySVG,
-  type: 'svg',
-});
-export const StatsIcon: LocalSVGSource = deepFreeze({
-  SVG: StatsSVG,
-  type: 'svg',
-});
-export const StepsIcon: LocalSVGSource = deepFreeze({
-  SVG: StepsSVG,
-  type: 'svg',
-});
-export const RunnerIcon: LocalSVGSource = deepFreeze({
-  SVG: RunnerSVG,
-  type: 'svg',
-});
-export const AwardIcon: LocalSVGSource = deepFreeze({
-  SVG: AwardSVG,
-  type: 'svg',
-});
-
-//Plans
-export const ClockIcon: LocalSVGSource = deepFreeze({
-  SVG: ClockSVG,
-  type: 'svg',
-});
-export const ChangeIcon: LocalSVGSource = deepFreeze({
-  SVG: ChangeSVG,
-  type: 'svg',
-});
-export const ManageIcon: LocalSVGSource = deepFreeze({
-  SVG: ManageSVG,
-  type: 'svg',
-});
-export const SearchIcon: LocalSVGSource = deepFreeze({
-  SVG: SearchSVG,
-  type: 'svg',
-});
-
-export const WalkerIcon: LocalSVGSource = deepFreeze({
-  SVG: WalkerSVG,
-  type: 'svg',
-});
-export const StreamingIcon: LocalSVGSource = deepFreeze({
-  SVG: StreamingSVG,
-  type: 'svg',
-});
-export const BookIcon: LocalSVGSource = deepFreeze({
-  SVG: BookSVG,
-  type: 'svg',
-});
-export const CupIcon: LocalSVGSource = deepFreeze({
-  SVG: CupSVG,
-  type: 'svg',
-});
-export const LogoIcon: LocalSVGSource = deepFreeze({
-  SVG: LogoSVG,
-  type: 'svg',
-});
 
 export const MoreIcon: LocalSVGSource = deepFreeze({
   SVG: MoreSVG,
@@ -227,12 +105,12 @@ export const MoreIcon: LocalSVGSource = deepFreeze({
 export const AvatarIcon: LocalSVGSource = deepFreeze({
   SVG: AvatarSVG,
 });
-// Permissions
+ // Permissions
 import PermissionsLocationSVG from './svgs/permissions/permissions-location.svg';
 import PermissionsMotionSVG from './svgs/permissions/permissions-motion.svg';
 import PermissionsNotificationSVG from './svgs/permissions/permissions-notification.svg';
-import { Alert } from 'react-native';
-// Permissions
+
+// // Permissions
 export const PermissionsLocationIcon: LocalSVGSource = deepFreeze({
   SVG: PermissionsLocationSVG,
   type: 'svg',
@@ -245,7 +123,7 @@ export const PermissionsNotificationIcon: LocalSVGSource = deepFreeze({
   SVG: PermissionsNotificationSVG,
   type: 'svg',
 });
-// Selection
+ // Selection
 export const CheckBoxSelected: LocalSVGSource = deepFreeze({
   SVG: CheckBoxSelectedSVG,
   type: 'svg',
@@ -271,7 +149,7 @@ export const RadioButtonUnselected: LocalSVGSource = deepFreeze({
   type: 'svg',
 });
 
-// Actions
+ // Actions
 
 export const PauseIcon: LocalSVGSource = deepFreeze({
   SVG: PauseSVG,
@@ -418,107 +296,107 @@ export const CircleEllipsisIcon: LocalSVGSource = Object.freeze({
 export const EllipsisIcon: LocalSVGSource = Object.freeze({
   SVG: EllipsisSVG,
 });
-export const FamilyIcon: LocalSVGSource = Object.freeze({
-  SVG: FamilySVG,
-});
-export const FamilyFillIcon: LocalSVGSource = Object.freeze({
-  SVG: FamilyFillSVG,
-});
-export const HandHoldingHeartFillIcon: LocalSVGSource = Object.freeze({
-  SVG: HandHoldingHeartFillSVG,
-});
-export const HandHoldingHeartIcon: LocalSVGSource = Object.freeze({
-  SVG: HandHoldingHeartSVG,
-});
-export const HouseFillIcon: LocalSVGSource = Object.freeze({
-  SVG: HouseFillSVG,
-});
-export const HouseIcon: LocalSVGSource = Object.freeze({
-  SVG: HouseSVG,
-});
-export const IdCardFillIcon: LocalSVGSource = Object.freeze({
-  SVG: IdCardFillSVG,
-});
-export const IdCardIcon: LocalSVGSource = Object.freeze({
-  SVG: IdCardSVG,
-});
+// export const FamilyIcon: LocalSVGSource = Object.freeze({
+//   SVG: FamilySVG,
+// });
+// export const FamilyFillIcon: LocalSVGSource = Object.freeze({
+//   SVG: FamilyFillSVG,
+// });
+// export const HandHoldingHeartFillIcon: LocalSVGSource = Object.freeze({
+//   SVG: HandHoldingHeartFillSVG,
+// });
+// export const HandHoldingHeartIcon: LocalSVGSource = Object.freeze({
+//   SVG: HandHoldingHeartSVG,
+// });
+// export const HouseFillIcon: LocalSVGSource = Object.freeze({
+//   SVG: HouseFillSVG,
+// });
+// export const HouseIcon: LocalSVGSource = Object.freeze({
+//   SVG: HouseSVG,
+// });
+// export const IdCardFillIcon: LocalSVGSource = Object.freeze({
+//   SVG: IdCardFillSVG,
+// });
+// export const IdCardIcon: LocalSVGSource = Object.freeze({
+//   SVG: IdCardSVG,
+// });
 
-export const DollarSignIcon: LocalSVGSource = Object.freeze({
-  SVG: DollarSignSVG,
-});
+// export const DollarSignIcon: LocalSVGSource = Object.freeze({
+//   SVG: DollarSignSVG,
+// });
 
-export const BabyCarriageIcon: LocalSVGSource = Object.freeze({
-  SVG: BabyCarriageSVG,
-});
-export const BellIcon: LocalSVGSource = Object.freeze({
-  SVG: BellSVG,
-});
-export const CalendarIcon: LocalSVGSource = Object.freeze({
-  SVG: CalendarSVG,
-});
-export const CameraIcon: LocalSVGSource = Object.freeze({
-  SVG: CameraSVG,
-});
-export const DesktopIcon: LocalSVGSource = Object.freeze({
-  SVG: DesktopSVG,
-});
-export const FaceConfusedIcon: LocalSVGSource = Object.freeze({
-  SVG: FaceConfusedSVG,
-});
-export const FileIcon: LocalSVGSource = Object.freeze({
-  SVG: FileSVG,
-});
-export const FolderIcon: LocalSVGSource = Object.freeze({
-  SVG: FolderSVG,
-});
-export const GearIcon: LocalSVGSource = Object.freeze({
-  SVG: GearSVG,
-});
-export const GlobeIcon: LocalSVGSource = Object.freeze({
-  SVG: GlobeSVG,
-});
-export const ImageIcon: LocalSVGSource = Object.freeze({
-  SVG: ImageSVG,
-});
-export const PhoneIcon: LocalSVGSource = Object.freeze({
-  SVG: PhoneSVG,
-});
+// export const BabyCarriageIcon: LocalSVGSource = Object.freeze({
+//   SVG: BabyCarriageSVG,
+// });
+// export const BellIcon: LocalSVGSource = Object.freeze({
+//   SVG: BellSVG,
+// });
+// export const CalendarIcon: LocalSVGSource = Object.freeze({
+//   SVG: CalendarSVG,
+// });
+// export const CameraIcon: LocalSVGSource = Object.freeze({
+//   SVG: CameraSVG,
+// });
+// export const DesktopIcon: LocalSVGSource = Object.freeze({
+//   SVG: DesktopSVG,
+// });
+// export const FaceConfusedIcon: LocalSVGSource = Object.freeze({
+//   SVG: FaceConfusedSVG,
+// });
+// export const FileIcon: LocalSVGSource = Object.freeze({
+//   SVG: FileSVG,
+// });
+// export const FolderIcon: LocalSVGSource = Object.freeze({
+//   SVG: FolderSVG,
+// });
+// export const GearIcon: LocalSVGSource = Object.freeze({
+//   SVG: GearSVG,
+// });
+// export const GlobeIcon: LocalSVGSource = Object.freeze({
+//   SVG: GlobeSVG,
+// });
+// export const ImageIcon: LocalSVGSource = Object.freeze({
+//   SVG: ImageSVG,
+// });
+// export const PhoneIcon: LocalSVGSource = Object.freeze({
+//   SVG: PhoneSVG,
+// });
 
-export const talloLogo: LocalSVGSource = Object.freeze({
-  SVG: RightArrowSVG,
-});
-export const RightArrowIcon: LocalSVGSource = Object.freeze({
-  SVG: RightArrowSVG,
-});
-export const LoginBackgroundIcon: LocalSVGSource = Object.freeze({
-  SVG: LoginBackgroundSVG,
-});
-export const CircleBackgroundIcon: LocalSVGSource = Object.freeze({
-  SVG: CircleSVG,
-});
-export const ErrorFaceIcon: LocalSVGSource = Object.freeze({
-  SVG: ErrorFaceSVG,
-});
-export const FaceIDIcon: LocalSVGSource = Object.freeze({
-  SVG: FaceIDSVG,
-});
-export const FingerprintIcon: LocalSVGSource = Object.freeze({
-  SVG: FingerPrintSVG,
-});
-export const HelpIcon: LocalSVGSource = Object.freeze({
-  SVG: HelpSVG,
-});
+// export const talloLogo: LocalSVGSource = Object.freeze({
+//   SVG: RightArrowSVG,
+// });
+// export const RightArrowIcon: LocalSVGSource = Object.freeze({
+//   SVG: RightArrowSVG,
+// });
+// export const LoginBackgroundIcon: LocalSVGSource = Object.freeze({
+//   SVG: LoginBackgroundSVG,
+// });
+// export const CircleBackgroundIcon: LocalSVGSource = Object.freeze({
+//   SVG: CircleSVG,
+// });
+// export const ErrorFaceIcon: LocalSVGSource = Object.freeze({
+//   SVG: ErrorFaceSVG,
+// });
+// export const FaceIDIcon: LocalSVGSource = Object.freeze({
+//   SVG: FaceIDSVG,
+// });
+// export const FingerprintIcon: LocalSVGSource = Object.freeze({
+//   SVG: FingerPrintSVG,
+// });
+// export const HelpIcon: LocalSVGSource = Object.freeze({
+//   SVG: HelpSVG,
+// });
 
-export const Curve: LocalSVGSource = Object.freeze({
-  SVG: PhoneCurveSVG,
-});
+// export const Curve: LocalSVGSource = Object.freeze({
+//   SVG: PhoneCurveSVG,
+// });
 
-export const WarningIcon: LocalSVGSource = Object.freeze({
-  SVG: WarningSVG,
-});
-export const ShareIcon: LocalSVGSource = Object.freeze({
-  SVG: ShareSVG,
-});
-export const CloseIcon: LocalSVGSource = Object.freeze({
-  SVG: CloseSVG,
-});
+// export const WarningIcon: LocalSVGSource = Object.freeze({
+//   SVG: WarningSVG,
+// });
+// export const ShareIcon: LocalSVGSource = Object.freeze({
+//   SVG: ShareSVG,
+// });
+// export const CloseIcon: LocalSVGSource = Object.freeze({
+//   SVG: CloseSVG,
+// });

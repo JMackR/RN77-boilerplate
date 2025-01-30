@@ -1,5 +1,5 @@
 import React, { useContext } from 'react';
-import { useSelector } from '../../../node_modules/react-redux';
+// import { useSelector } from '../../../node_modules/react-redux';
 import type { ColorTheme } from '../type-defs';
 import { DefaultColorTheme, colorThemes } from './color-theme-constants';
 import type { ThemeProviderProps } from './theme-provider.props';
@@ -35,9 +35,9 @@ export const ColorThemeContext = React.createContext<ColorThemeContextProps>({
 
 export const ColorThemeContextProvider = (props: ThemeProviderProps) => {
   const { children } = props;
-  const clientBrandColor = useSelector((state: any) => {
-    return state.client?.clientSettings?.mobileAppSetting?.mobilePrimaryColor;
-  });
+  // const clientBrandColor = useSelector((state: any) => {
+  //   return state.client?.clientSettings?.mobileAppSetting?.mobilePrimaryColor;
+  // });
   const { hasLoadedTheme, colorThemeId, setColorThemeId, isUsingSystemProvidedTheme } = useColorThemeLoading();
 
   if (!hasLoadedTheme) {
@@ -46,7 +46,7 @@ export const ColorThemeContextProvider = (props: ThemeProviderProps) => {
 
   const clientColorTheme = {
     ...colorThemeForThemeId(colorThemeId).colors,
-    brand: clientBrandColor ? clientBrandColor : '#23395B',
+    brand:'#23395B',
   };
 
   const modifiedTheme = {
