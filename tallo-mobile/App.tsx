@@ -7,22 +7,8 @@
 
 import React from 'react';
 import type { PropsWithChildren } from 'react';
-import {
-  //SafeAreaView,
 
-  StyleSheet,
-  //Text,
-  useColorScheme,
-} from 'react-native';
-import {RootNavigator} from '@tallo/navigation'
 
-import {
-  Colors,
-  DebugInstructions,
-  Header,
-  LearnMoreLinks,
-  ReloadInstructions,
-} from 'react-native/Libraries/NewAppScreen';
 import { ThemeProvider } from '@tallo/themes';
 import { RootNavigator } from '@tallo/navigation';
 // import '../shared-libs/translations/i18n/i18n';
@@ -31,9 +17,7 @@ import { useTranslation } from 'react-i18next';
 import { GestureHandlerRootView } from 'react-native-gesture-handler';
 import { SafeAreaProvider } from 'react-native-safe-area-context';
 import { findBestLanguageTag } from 'react-native-localize';
-type SectionProps = PropsWithChildren<{
-  title: string;
-}>;
+import { NavigationContainer } from '@react-navigation/native';
 
 type findBestLanguageTag = (languageTags: string[]) => { languageTag: string; isRTL: boolean } | void;
 
@@ -46,6 +30,7 @@ function App(): React.JSX.Element {
 
 
   return (
+		<NavigationContainer>
     <SafeAreaProvider>
       <GestureHandlerRootView style={{ flex: 1 }}>
         <ThemeProvider>
@@ -54,6 +39,7 @@ function App(): React.JSX.Element {
         </ThemeProvider>
       </GestureHandlerRootView>
     </SafeAreaProvider>
+		</NavigationContainer>
   );
 }
 

@@ -3,7 +3,7 @@ import { combineSlices, configureStore } from '@reduxjs/toolkit';
 import { authSlice } from '@tallo/authentication/auth-module';
 
 //import { emptySplitApi as upwardapi } from '@tallo/store/emptyApi';
-import { userSlice } from '@tallo/user';
+//import { userSlice } from '@tallo/user';
 import { Provider, TypedUseSelectorHook, useDispatch, useSelector } from 'react-redux';
 import { rememberEnhancer, rememberReducer } from 'redux-remember';
 //import { errorMiddleware } from './error-middleware';
@@ -11,7 +11,7 @@ import { rememberEnhancer, rememberReducer } from 'redux-remember';
 const rememberedKeys = ['auth', 'globalFeed', 'postDetail', 'feed', 'ui'];
 //export const emptySplitApi = upwardapi(Config.BASE_URL as string);
 const rootReducer = rememberReducer(
-  combineSlices(authSlice, userSlice),
+  combineSlices(authSlice),
 );
 // MAKE STORE HAS TO STAY IN THIS FILE AND ALL SLICES ARE IMPORTED HERE DO NOT MOVE- AR
 const makeStore = () => {
