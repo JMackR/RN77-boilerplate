@@ -3,7 +3,6 @@ import { RootState } from './index';
 import { ApiTags } from './types';
 //import { RootState } from './store';
 
-//const baseUrl = process?.env?.NEXT_PUBLIC_BASE_URL ? process.env.NEXT_PUBLIC_BASE_URL : 'https://dev.api.upwardrunning.com';
 //Config.BASE_URL;
 // Create our baseQuery instance
 const createBaseQuery = (baseURL: string) =>

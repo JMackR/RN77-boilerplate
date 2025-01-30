@@ -2,12 +2,11 @@ import { emptySplitApi as upwardapi } from '@tallo/store/emptyApi';
 import { TypedUseSelectorHook, useDispatch, useSelector, useStore } from 'react-redux';
 
 import { combineSlices, configureStore } from '@reduxjs/toolkit';
-import { authSlice, partnerChallengeCheckoutSlice, partnerChallengeInfoSlice, signupSlice } from '@tallo/authentication/auth-module';
+import { authSlice } from '@tallo/authentication/auth-module';
 import { modalSlice } from '@tallo/navigation/navigation';
-import { trainingSlice, weeklyWorkoutSlice } from '@tallo/training/index';
 import { userSlice } from '@tallo/user/index';
 import { errorMiddleware } from './error-middleware';
-import { activityDetail } from '@tallo/stats/stats-module';
+
 import { rememberReducer } from 'redux-remember';
 import { loadingMiddleware } from './loading-middleware';
 import { asyncLoading } from './loading.slice';
@@ -16,15 +15,10 @@ export const emptySplitApi = upwardapi(process.env.NEXT_PUBLIC_BASE_URL as strin
 const rootReducer = rememberReducer(
   combineSlices(
     asyncLoading,
-    modalSlice,
     authSlice,
-    signupSlice,
-    partnerChallengeInfoSlice,
-    partnerChallengeCheckoutSlice,
+
     userSlice,
-    trainingSlice,
-    weeklyWorkoutSlice,
-    activityDetail,
+
     errorSliceExt,
     emptySplitApi,
   ),

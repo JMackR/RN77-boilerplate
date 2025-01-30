@@ -15,9 +15,7 @@ export const authSlice = createSlice({
     setToken: (state, action: PayloadAction<UpwardRunningAuthToken>) => {
       state.data = { ...state.data, ...action.payload };
     },
-    select: (state, action) => {
-      state.data = { ...state, ...action.payload };
-    },
+   
     setForcedLogout: (state, action: PayloadAction<boolean>) => {
       state.forcedLogout = action.payload;
     },
@@ -29,4 +27,4 @@ export const authSlice = createSlice({
 
 export const tokenSelector = (state: AuthAppStore) => state.auth.data?.upwrJWToken;
 export const userAuthorizedSelector = (state: AuthAppStore) => state.auth.userAuthorized;
-export const { select, setToken, setForcedLogout, setUserAuthorized } = authSlice.actions;
+export const { setToken, setForcedLogout, setUserAuthorized } = authSlice.actions;

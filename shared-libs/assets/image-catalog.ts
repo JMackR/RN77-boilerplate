@@ -11,12 +11,12 @@ export interface LocalSVGSource {
   };
 }
 
-// Actions
-import RunSVG from './svgs/runtest.svg';
-export const RunIcon: LocalSVGSource = deepFreeze({
-  SVG: RunSVG,
-  type: 'svg',
-});
+//// Actions
+//import RunSVG from './svgs/runtest.svg';
+//export const RunIcon: LocalSVGSource = deepFreeze({
+//  SVG: RunSVG,
+//  type: 'svg',
+//});
 import BabyCarriageSVG from './svgs/baby-carriage.svg';
 import BellSVG from './svgs/bell.svg';
 import CalendarSVG from './svgs/calendar.svg';

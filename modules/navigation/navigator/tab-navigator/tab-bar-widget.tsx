@@ -1,10 +1,10 @@
 import type { BottomTabBarProps } from '@react-navigation/bottom-tabs';
 import { NavigationState, StackActions, useNavigationState } from '@react-navigation/native';
 import { NavigableRoute } from '@tallo/navigation';
-import { RootState, useAppSelector } from '@tallo/store';
-import { useGetApiUserCurrentUserInfoQuery } from '@tallo/store/upwardapi';
+//import { RootState, useAppSelector } from '@tallo/store';
+//import { useGetApiUserCurrentUserInfoQuery } from '@tallo/store/upwardapi';
 import { useColorForBackgroundColor } from '@tallo/themes';
-import { ms } from '@tallo/utilities';
+//import { ms } from '@tallo/utilities';
 import { StyleSheet, View } from 'react-native';
 import { isTablet } from 'react-native-device-info';
 import { useSafeAreaInsets } from 'react-native-safe-area-context';
@@ -40,12 +40,12 @@ const TabBarWidget = (props: BottomTabBarProps) => {
   const { navigation } = props;
   const insets = useSafeAreaInsets();
   //const dispatch = useAppDispatch();
-  const rememberNoPlanChoice = useAppSelector((state: RootState) => state.training.rememberNoPlanChoice);
-  const { data } = useGetApiUserCurrentUserInfoQuery();
+  //const rememberNoPlanChoice = useAppSelector((state: RootState) => state.training.rememberNoPlanChoice);
+  //const { data } = useGetApiUserCurrentUserInfoQuery();
   const backgroundColor = useColorForBackgroundColor('brandAlt');
   const navState = useNavigationState((state) => state);
 
-  const currentChallenge = data?.currentChallengeID;
+  //const currentChallenge = data?.currentChallengeID;
 
 
   // Set up tab bar styles verses in the return
@@ -67,7 +67,7 @@ const TabBarWidget = (props: BottomTabBarProps) => {
       style={[
         {
           ...tabBarStyles,
-          marginTop: ms(-10),
+          //marginTop: ms(-10),
           alignItems: 'center',
         },
       ]}
@@ -96,21 +96,21 @@ const TabBarWidget = (props: BottomTabBarProps) => {
           const onPress = () => {
             if (!isFocused) {
               // dispatch(resetCurrentPlan()) // USED TO RESET THE PLANS
-              if (
-                !currentChallenge &&
-                route.name === NavigableRoute.TRAINING_STACK &&
-                !rememberNoPlanChoice
-              ) {
-                navigation.navigate(NavigableRoute.SELECT_PLAN_MODAL, { returnRoute: 'APP_STACK', isRandom: true });
-              } else if (
-                !currentChallenge &&
-                route.name === NavigableRoute.TRAINING_STACK &&
-                rememberNoPlanChoice
-              ) {
-                navigation.navigate(NavigableRoute.NO_PLAN_RUN_TRACKER, { returnRoute: 'APP_STACK', isRandom: true });
-              } else {
-                navigation.navigate(route.name);
-              }
+              //if (
+              //  !currentChallenge &&
+              //  route.name === NavigableRoute.TRAINING_STACK &&
+              //  !rememberNoPlanChoice
+              //) {
+              //  navigation.navigate(NavigableRoute.SELECT_PLAN_MODAL, { returnRoute: 'APP_STACK', isRandom: true });
+              //} else if (
+              //  !currentChallenge &&
+              //  route.name === NavigableRoute.TRAINING_STACK &&
+              //  rememberNoPlanChoice
+              //) {
+              //  navigation.navigate(NavigableRoute.NO_PLAN_RUN_TRACKER, { returnRoute: 'APP_STACK', isRandom: true });
+              //} else {
+              //  navigation.navigate(route.name);
+              //}
               if (canPopTabStack(navState, route.name)) {
                 navigation.dispatch(StackActions.popToTop());
               }
@@ -126,7 +126,7 @@ const TabBarWidget = (props: BottomTabBarProps) => {
               onPress={onPress}
               active={isFocused}
               labelText={label}
-              renderIcon={icon({ focused: isFocused })}
+              //renderIcon={icon({ focused: isFocused })}
               testID={label}
             />
           );
