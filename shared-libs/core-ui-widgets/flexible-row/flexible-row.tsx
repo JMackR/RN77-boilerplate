@@ -1,7 +1,7 @@
 // @ts-nocheck
 import { ICON_MARGIN_MULTIPLIER, formattedSubContentRowFromProps } from './common';
 import { FlexibleRowProps, FlexibleMainContentRow, FlexibleAction } from './flexible-row-props';
-import { ActionRightChevron, AlertHelpLine } from '@loop/assets';
+import { ActionRightChevron, AlertHelpLine } from '@tallo/assets';
 import { SVG, Text, Toggle, ToggleProps } from '@tallo/core-ui-library';
 import { useColor, useColorForBackgroundColor, useMargin } from '@tallo/themes';
 import { StyleSheet, css } from 'aphrodite/no-important';

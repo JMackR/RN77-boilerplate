@@ -1,6 +1,6 @@
 import React from 'react';
 import { useMargin } from '@tallo/themes';
-import invariant from 'invariant';
+//import invariant from 'invariant';
 import { View, ViewProps } from 'react-native';
 import { MarginProps } from './margin-props';
 
@@ -33,10 +33,10 @@ export const Margin: React.FunctionComponent<MarginProps> = (props) => {
     testID,
   } = props;
 
-  invariant(
-    allowNoChildren || React.Children.count(children) > 0,
-    'Margin requires children, did you mean to use Spacer',
-  );
+  //invariant(
+  //  allowNoChildren || React.Children.count(children) > 0,
+  //  'Margin requires children, did you mean to use Spacer',
+  //);
 
   const { baseMargin } = useMargin();
 
@@ -57,6 +57,7 @@ export const Margin: React.FunctionComponent<MarginProps> = (props) => {
         backgroundColor: debugColor,
         height,
         width,
+				zIndex: 2,
       },
     }),
     [

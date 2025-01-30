@@ -167,7 +167,7 @@ export const FlexibleRow = memo((props: FlexibleRowProps) => {
             >
               <View style={styles.mainContentRowLeftHelpIcon}>
                 <View collapsable={false} ref={row.helperIconRef}>
-                  <SVG tint="grey400" localSVG={{ SVG: AlertHelpLine.SVG, size: { width: 16, height: 16 } }} />
+                  {/*<SVG tint="grey400" localSVG={{ SVG: AlertHelpLine.SVG, size: { width: 16, height: 16 } }} />*/}
                 </View>
               </View>
             </TouchableOpacity>

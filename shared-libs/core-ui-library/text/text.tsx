@@ -23,10 +23,11 @@ export const Text: React.FunctionComponent<TextProps> = (props) => {
   const font = useFontForTextType(textType || 'bodyRegular2');
   const color = useColorForTextColor(textColor || 'primary');
   const textShadow = dropShadow ? shadow.shadow : undefined;
-
+	console.log('color', font);
+	
   return (
     <RNText
-      style={[font, { color, textAlign, textDecorationLine }, textShadow]}
+      style={[font, { color, textAlign, textDecorationLine }, textShadow, {zIndex: 2}]}
       numberOfLines={numberOfLines}
       ellipsizeMode={ellipsizeMode}
       onPress={onPress}
