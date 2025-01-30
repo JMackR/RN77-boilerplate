@@ -1,5 +1,5 @@
 import { useState, useEffect } from 'react';
-import { PREFERRED_COLOR_THEME_STORAGE_KEY, StorageController } from '@tallo/utilities';
+import { PREFERRED_COLOR_THEME_STORAGE_KEY, StorageController } from '@tallo/utilities/storage';
 import { DefaultColorTheme, colorThemes } from './color-theme-constants';
 import { useSystemTheme, MATCH_SYSTEM_COLOR_THEME_ID } from './system-theme-provider';
 
